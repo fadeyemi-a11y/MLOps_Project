@@ -1,6 +1,4 @@
 
-import os
-from pathlib import path
 # for data manipulation
 import pandas as pd
 # for building the preprocessing and modeling pipeline
@@ -13,9 +11,6 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 # for model serialization and experiment tracking
 import joblib
 import mlflow
-
-# Create parent directories if they dont already exist
-os.makedirs(os.path.dirname(model_path), exist_ok=True)
 
 mlflow.set_tracking_uri("http://localhost:5000")   # complete the code to set the MLflow tracking URI
 mlflow.set_experiment("tourism_project-training-experiment")     # complete the code to set the MLflow experiment name (same as the dev experimentation cell)
